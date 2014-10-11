@@ -1,43 +1,60 @@
-body{
-	font-family: Helvetica, Arial, sans-serif;
-	font-size: 15px;
-	padding: 20px 0;
-	background: #e1e1e1;
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    padding: 20px 0;
+    background: #e1e1e1;
 }
-
-.container{
-	width: 60%;
-	max-width: 300px;
-	margin:0 auto;
-	background: white;
-	border:1px solid #cccccc;
-	padding:20px;
-	border-radius: 4px;
-	box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+.container {
+    width: 60%;
+    max-width: 300px;
+    margin: 0 auto;
+    background: white;
+    border: 1px solid #cccccc;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
-
-form{
-	margin:0;
+form {
+    margin: 0;
 }
-
-form input{
-	border-radius: 4px;
-	display: block;
-	margin: 0 0 10px 0;
-	border:1px solid #bbb;
-	background: white
-	padding:4px;
+form input {
+    border-radius: 4px;
+    display: block;
+    margin: 0 0 10px 0;
+    border: 1px solid #bbb;
+    background: white padding: 4px;
 }
-
-form input:last-child{
-	margin:0;
+form input:last-child {
+    margin: 0;
 }
-
-form input[type=submit]:hover{
-	background:#eee;
-	cursor:pointer;
+form input[type=submit]:hover {
+    background: #eee;
+    cursor: pointer;
 }
-p.error{
-	color: red;
-	margin: 0 0 10px 0;
+p.error {
+    color: red;
+    margin: 0 0 10px 0;
+}
+h1{
+	font-size: 25px;
+	padding:10px;
+	border-bottom: 1px solid #CCCCCC;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul li {
+    line-height: 40px;
+}
+a:link, a:visited {
+    color: #4e7ea7;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+input[type=checkbox]{
+	display: inline;
 }
