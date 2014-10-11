@@ -2,7 +2,7 @@
 
 @section('content')
 
-	<h1>Sign up <small>(<a href="{{ URL::route('signup') }}">Go Login</a>)</small></h1>
+	<h1>Sign up <small>(<a href="{{ URL::route('login') }}">Go Login</a>)</small></h1>
 
 	@foreach ($errors->all() as $error) 
 		<p class="error">{{ $error }}</p>

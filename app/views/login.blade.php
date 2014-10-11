@@ -13,6 +13,5 @@
 		<input type="password" name="password" placeholder="Password"/>
 		<input type="submit" value="Sign in"/>
 	{{ Form::close() }}
-
-
+	
 @stop
