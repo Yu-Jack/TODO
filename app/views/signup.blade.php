@@ -2,7 +2,7 @@
 
 @section('content')
 
-	<h1>Sign in <small>(<a href="{{ URL::route('signup') }}">Go Signup</a>)</small></h1>
+	<h1>Sign up <small>(<a href="{{ URL::route('signup') }}">Go Login</a>)</small></h1>
 
 	@foreach ($errors->all() as $error) 
 		<p class="error">{{ $error }}</p>
@@ -11,8 +11,7 @@
 	{{ Form::open(array('autocomplete' => 'off' )) }}
 		<input type="text" name="username" placeholder="Username"/>
 		<input type="password" name="password" placeholder="Password"/>
-		<input type="submit" value="Sign in"/>
+		<input type="submit" value="Sign up"/>
 	{{ Form::close() }}
-
 
 @stop

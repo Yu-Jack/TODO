@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
+	<small><a href="{{ URL::route('logout') }}">Logout</a></small>
 	<h1>Your Item <small>(<a href="{{ URL::route('new') }}">New Task</a>)</small></h1>
 
 	<ul>

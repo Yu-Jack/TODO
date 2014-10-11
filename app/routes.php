@@ -36,4 +36,7 @@ Route::get('/delete/{task}',array('as' => 'delete', 'uses' => 'HomeController@ge
 Route::get('/login', array('as' => 'login', 'uses' => 'AuthController@getLogin'))->before('guest');
 Route::post('login', array('uses' => 'AuthController@postLogin'))->before('csrf');
 
+Route::get('/signup', array('as' => 'signup', 'uses' => 'AuthController@getSignup'))->before('guest');
+Route::post('signup', array('uses' => 'AuthController@postSignup'))->before('csrf');
+
 Route::get('/logout', array('as'=> 'logout', 'uses'=> 'AuthController@getLogout'));
