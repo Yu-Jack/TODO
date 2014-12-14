@@ -1,12 +1,21 @@
 <?php
 
+use Item\Repositories\ItemRepositoryInterface;
+
 class HomeController extends BaseController {
+
+	protected $ItemRepository;
+
+	public function __construct(ItemRepositoryInterface $ItemRepository){
+
+		$this->items = $ItemRepository;
+		
+	}
 
 	public function getIndex()
 	{
-		$items = Auth::user()->items;
+		$items = $this->items->getOwnItem(Auth::user());
 
-		//return View::make('home')->widthItems($items)->with('items',$items);
 		return View::make('home',array(
 			'items' => $items
 		));
@@ -15,12 +24,13 @@ class HomeController extends BaseController {
 	public function postIndex()
 	{
 		$id = Input::get('id');
-
 		$item = Item::findOrFail($id);
 
-		if ( $item->owner_id == Auth::user()->id ){
+		if ( $this->items->isOwnItem($item ,Auth::user())){
+
 			$item->mark();
 		}
+
 		return Redirect::route('home');
 	}
 
@@ -51,7 +61,8 @@ class HomeController extends BaseController {
 
 		$task = Item::where('id', $task)->first();
 
-		if( $task->owner_id == Auth::user()->id ){
+		if ( $this->items->isOwnItem($task ,Auth::user())){
+
 			$task->delete();
 		}
 

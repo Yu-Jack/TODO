@@ -7,6 +7,7 @@ class AuthController extends Controller{
 	}
 
 	public function postLogin(){
+		
 		$rule = array('username' => 'required', 'password'=>'required');
 		$validator = Validator::make(Input::all(), $rule);
 

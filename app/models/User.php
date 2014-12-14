@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 use Illuminate\Auth\UserTrait;
 use Illuminate\Auth\UserInterface;
@@ -46,7 +46,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	}
 
 	public function items(){
-		return $this->hasMany('Item', 'owner_id');
+		return $this->hasMany('Item', 'owner_id', 'id');
 	}
 
 }

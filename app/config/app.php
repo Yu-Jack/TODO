@@ -95,6 +95,7 @@ return array(
 
 	'providers' => array(
 
+		'Item\Repositories\ItemRepositoryInterfaceServiceProvider',
 		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
 		'Illuminate\Auth\AuthServiceProvider',
 		'Illuminate\Cache\CacheServiceProvider',
